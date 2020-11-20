@@ -5,7 +5,7 @@ import javax.swing.*;
 public class DecToBin {
     public static void main(String[] args) {
         String inputText = JOptionPane.showInputDialog("Zahl eingeben!");
-        final long inputValue = Integer.parseInt(inputText);
+        final long inputValue = Long.parseLong(inputText);
 
         System.out.print("Die groesste 1-Bit-Gruppe von " + inputValue + " (Binaer:");
         getBinaryString(inputValue);
@@ -44,8 +44,8 @@ public class DecToBin {
 
 
     static int getActiveBitGroupSize(long inputValue)
-    {
-        long bitComparer = 1;
+    {                          //0000.0101
+        long bitComparer = 1;  //0000.0010
         int maxBitGroupSize = 0;
         int actualBitGroupSize = 0;
 
